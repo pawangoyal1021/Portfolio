@@ -16,7 +16,7 @@ class _NavBarState extends State<NavBar> {
     return ScreenTypeLayout(
         mobile: MobileNavBar(),
         desktop: DesktopNavBar(),
-        // tablet: ,
+        tablet: TabletNavBar(),
     );
   }
   //================ Mobile UI =========================
@@ -33,6 +33,37 @@ class _NavBarState extends State<NavBar> {
       ),
     );
   }
+
+  //================ Tablet UI =========================
+  Widget TabletNavBar(){
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 6),
+      height: 50,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          navLogo(),
+          Row(
+            children: [
+              navButton('Home'),
+              navButton('About'),
+              navButton('Skills'),
+              navButton('Projects'),
+            ],
+          ),
+          Container(
+            height: 40,
+            child: ElevatedButton(
+                style: borderedButtonStyle,
+                onPressed: (){},
+                child: const Text('Contact',
+                    style: TextStyle(color: Colors.brown))),
+          )
+        ],
+      ),
+    );
+  }
+
   //================ Desktop UI =========================
   Widget DesktopNavBar(){
     return Container(
