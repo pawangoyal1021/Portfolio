@@ -115,6 +115,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  responsive_builder:
+    dependency: "direct main"
+    description:
+      name: responsive_builder
+      sha256: "8d98185ff37500cb88405e87fb4ec50440cb99423609142debb9663f093766fb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.1"
   sky_engine:
     dependency: transitive
     description: flutter
